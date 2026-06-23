@@ -1,0 +1,14 @@
+{
+  "name": "module-02-tp-streaming-endpoint",
+  "version": "1.0.0",
+  "description": "Solution TP 2 - Endpoint Express streaming via pipeline + double diffusion + gestion d'erreurs",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "4.21.2"
+  }
+}
