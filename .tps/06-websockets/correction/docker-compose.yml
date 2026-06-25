@@ -1,0 +1,25 @@
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  app1:
+    build: .
+    environment:
+      - PORT=3002
+      - REDIS_URL=redis://redis:6379
+    ports:
+      - "3002:3002"
+    depends_on:
+      - redis
+
+  app2:
+    build: .
+    environment:
+      - PORT=3003
+      - REDIS_URL=redis://redis:6379
+    ports:
+      - "3003:3003"
+    depends_on:
+      - redis

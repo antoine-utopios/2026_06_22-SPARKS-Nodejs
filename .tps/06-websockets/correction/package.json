@@ -1,0 +1,20 @@
+{
+  "name": "module-08-tp",
+  "version": "1.0.0",
+  "description": "SOLUTION : chat complet (namespaces, rooms, auth handshake par token, events types) + scaling multi-instances via @socket.io/redis-adapter",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@socket.io/redis-adapter": "8.3.0",
+    "express": "4.21.2",
+    "ioredis": "5.4.1",
+    "socket.io": "4.8.1"
+  },
+  "devDependencies": {
+    "socket.io-client": "4.8.1"
+  }
+}
