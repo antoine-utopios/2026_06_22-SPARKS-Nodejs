@@ -1,0 +1,16 @@
+{
+  "name": "module-04-tp-solution",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Solution TP 4 - Profiler, corriger une fuite memoire et scaler en cluster",
+  "scripts": {
+    "start": "node src/app.js",
+    "start:cluster": "node src/cluster.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "4.21.2",
+    "lru-cache": "11.0.2"
+  }
+}
