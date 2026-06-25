@@ -1,0 +1,38 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3.13-management-alpine
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  api:
+    image: node:20-alpine
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      AMQP_URL: amqp://rabbitmq:5672
+      PORT: "3000"
+    ports:
+      - "3000:3000"
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: sh -c "npm install --no-audit --no-fund && npm run start:api"
+
+  worker:
+    image: node:20-alpine
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      AMQP_URL: amqp://rabbitmq:5672
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: sh -c "npm install --no-audit --no-fund && npm run start:worker"

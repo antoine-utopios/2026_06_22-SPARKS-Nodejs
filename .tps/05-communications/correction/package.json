@@ -1,0 +1,17 @@
+{
+  "name": "module-05-tp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Solution TP 5 - API Express qui publie une tache AMQP + worker avec ack, requeue/DLQ et back-pressure",
+  "scripts": {
+    "start:api": "node src/api.js",
+    "start:worker": "node src/worker.js",
+    "topologie": "node src/topologie.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "amqplib": "0.10.4",
+    "express": "4.21.2"
+  }
+}

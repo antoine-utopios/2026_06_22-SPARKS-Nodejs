@@ -1,0 +1,15 @@
+{
+  "name": "module-05-exercice",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Solution Exercice 5 - Worker AMQP avec acquittement (exchange/queue/routing key, ack/nack, DLQ, prefetch)",
+  "scripts": {
+    "start": "node src/worker.js",
+    "topologie": "node src/topologie.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "amqplib": "0.10.4"
+  }
+}
