@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Websockets</title>
+</head>
+
+<body>
+  <main>
+    <form action="#" id="chat">
+      <input type="text" id="chat-message">
+      <button>Envoyer</button>
+    </form>
+  </main>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io('https://localhost:3000/notifications');
+
+  socket.on('newConnection', (payload) => {
+    const { username, message } = payload;
+    console.log(message);
+
+  })
+
+  function sendMessage() {
+    socket.emit('message', {
+      message: document.querySelector('#chat-message').value
+    })
+
+    document.querySelector('#chat-message').value = '';
+  }
+
+  document.querySelector('form#chat').addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    sendMessage();
+  })
+</script>
+
+</html>
