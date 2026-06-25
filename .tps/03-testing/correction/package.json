@@ -1,0 +1,18 @@
+{
+  "name": "module-03-tp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "TP 3 - API Express couverte de tests : unitaires + async + mocks/stubs (node:test, sinon, supertest)",
+  "scripts": {
+    "test": "node --test tests/task-service.test.js tests/tasks.routes.test.js",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "express": "4.21.2"
+  },
+  "devDependencies": {
+    "sinon": "18.0.1",
+    "supertest": "7.0.0"
+  }
+}

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+  <body>
+    <h1 id="title">Mes tâches</h1>
+    <input id="task-title" placeholder="Titre" />
+    <button id="add">Ajouter</button>
+    <ul id="list"></ul>
+    <script>
+      document.getElementById("add").addEventListener("click", async () => {
+        const title = document.getElementById("task-title").value;
+        const res = await fetch("/tasks", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ title, city: "Paris" })
+        });
+        const task = await res.json();
+        const li = document.createElement("li");
+        li.textContent = task.title;
+        document.getElementById("list").appendChild(li);
+      });
+    </script>
+  </body>
+</html>

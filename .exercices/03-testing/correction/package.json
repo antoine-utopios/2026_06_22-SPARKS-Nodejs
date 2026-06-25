@@ -1,0 +1,13 @@
+{
+  "name": "module-03-exercice",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Exercice 3 - Tester un service asynchrone avec mocks et stubs (sinon + node:test)",
+  "scripts": {
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "sinon": "18.0.1"
+  }
+}
