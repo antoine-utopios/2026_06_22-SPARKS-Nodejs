@@ -1,0 +1,14 @@
+{
+  "name": "module-07-tp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "TP 7 (SOLUTION) - Service combinant Worker Threads (calcul) + Crypto (signature Ed25519) + Web Streams API (exposition du flux) dans une route Express",
+  "scripts": {
+    "test": "node --test",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "4.21.2"
+  }
+}

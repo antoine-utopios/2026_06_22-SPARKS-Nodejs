@@ -1,0 +1,14 @@
+{
+  "name": "module-07-exercice",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Exercice 7 (SOLUTION) - Correler les logs d'une requete Express avec AsyncLocalStorage : requestId partout sans le passer en parametre",
+  "scripts": {
+    "test": "node --test",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "4.21.2"
+  }
+}

@@ -1,6 +1,6 @@
-# Exercice 6 — Rooms et acknowledgements avec Socket.IO
+# Exercice 8 — Rooms et acknowledgements avec Socket.IO
 
-> Module 6 · Durée : 45 min · Difficulté : 3/5 · Type : Exercice d'application
+> Module 8 · Durée : 45 min · Difficulté : 3/5 · Type : Exercice d'application
 
 ## Objectifs pédagogiques
 

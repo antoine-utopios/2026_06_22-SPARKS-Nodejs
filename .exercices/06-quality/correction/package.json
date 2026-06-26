@@ -1,0 +1,14 @@
+{
+  "name": "module-06-exercice",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Exercice 6 (SOLUTION) - Gestion d'erreurs centralisee : classes d'erreurs + middleware corrigeant un code qui avale les erreurs",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "4.21.2"
+  }
+}
